@@ -26,6 +26,8 @@ body
     
 }
 
+
+
 *
 {
     margin:0;
@@ -483,6 +485,8 @@ h3.my-profession
     color:var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
 }
+
+
 
 .about .about-content .personal-info .info-item p span
 {
