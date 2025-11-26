@@ -26,15 +26,6 @@ for (let i = 0; i < totalNavList; i++)
         }
         // Add active class to clicked nav item
         this.classList.add("active");
-        
-        // Get target section and scroll to it
-        const target = this.getAttribute("href");
-        if (target.startsWith('#')) {
-            const targetSection = document.querySelector(target);
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
     });
 }
 
