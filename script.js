@@ -16,36 +16,26 @@ const nav = document.querySelector(".nav"),
 
 for (let i = 0; i < totalNavList; i++)
 {
-    console.log(navList[i]);
     const a = navList[i].querySelector("a");
-    console.log(a);
-    a.addEventListener("click", function()
+    a.addEventListener("click", function(e)
     {
-        for (let i = 0; i < totalSection; i++)
-    {
-        allSection[i].classList.remove("back-section");
-    }
-        for (let j = 0; j < totalSection; j++)
+        // Remove active class from all nav items
+        for (let j = 0; j < totalNavList; j++)
         {
-            if(navList[j].querySelector("a").classList.contains("active"))
-            {
-                allSection[j].classList.add("back-section");
-            }
             navList[j].querySelector("a").classList.remove("active");
         }
+        // Add active class to clicked nav item
         this.classList.add("active");
-        showSection(this);  
-});
-
-function showSection(element)
-{
-    for (let i = 0; i < totalSection; i++)
-    {
-        allSection[i].classList.remove("active");
-    }
-    const target = element.getAttribute("href").split("#")[1];
-    document.querySelector("#" + target).classList.add("active");   
-}
+        
+        // Get target section and scroll to it
+        const target = this.getAttribute("href");
+        if (target.startsWith('#')) {
+            const targetSection = document.querySelector(target);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
 }
 
 const navTogglerBtn = document.querySelector(".nav-toggler"),
