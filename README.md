@@ -131,9 +131,7 @@ While this is a personal portfolio, suggestions and feedback are welcome! Feel f
 2. Create a feature branch
 3. Submit a pull request
 
-## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
